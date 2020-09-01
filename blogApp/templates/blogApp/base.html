@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title> Blog Example</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'blogApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'blogApp/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'blogApp/css/clean-blog.min.css' %}" rel="stylesheet">
+
+</head>
+<body>
+    {% block Navigation %} {% include 'blogApp/components/Navigation.html' %} {% endblock Navigation %}
+    {% block content %}  {% comment %} main Content {% endcomment %}{% endblock content %}
+    {% block footer %}  {% include 'blogApp/components/footer.html' %} {% endblock footer %}
+
+
+<!-- Bootstrap core JavaScript -->
+  <script src="{% static 'blogApp/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'blogApp/vendor/bootstrap/js/bootstrap.bundle.min.js'%} "></script>
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'blogApp/js/clean-blog.min.js' %}"></script>
+
+</body>
+</html>
